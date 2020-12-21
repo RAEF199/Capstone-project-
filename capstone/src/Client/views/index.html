@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    <title>Travel Planner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!-- HOME PAGE -->
+
+    <!-- Header of page -->
+    <header id='headerID'>
+        <div class='BG-image'>
+            <h1>Travel planner</h1>
+            <p>Here you can know how's the weather in your next trip ;)</p>
+        </div>
+    </header>
+
+
+    <!--Main section-->
+    <main id='mainID'>
+        <!-- post section -->
+        <section id='trip-section'>
+            <h1 id='postTit'>My trips</h1>
+
+            <!-- BOX 1-->
+            <div id='box1' class="box">
+                <label for="location">My trip to:</label>
+                <input type="text" id="location" name="location" placeholder="Enter Location"><br><br>
+                <label for="departing">Departing:</label>
+                <input type="text" id="departing" name="departing" placeholder="MM/DD/YYYY"><br><br>
+                <label for="return"> Return date:</label>
+                <input type="text" id="return" name="return" placeholder="MM/DD/YYYY"><br><br>
+                <button id="save" class="butt">Save</button>
+                <button id="remove" class="butt">Remove all trips</button>
+            </div>
+
+
+            <!-- BOX 2-->
+            <div id="box2" class="box">
+
+            </div>
+        </section>
+
+        <footer id="endBage">
+            <p>Contact me on: <a href="https://twitter.com/RAEF199" target="_Blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/alrawane/" target="_Blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/rawan-alfarhan-1b902b1a7/" target="_Blank"><i
+                        class="fab fa-linkedin-in"></i></a> </p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
+
